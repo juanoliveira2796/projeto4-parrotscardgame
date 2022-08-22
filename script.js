@@ -11,8 +11,8 @@ let keepPlaying = true;
 
 let nCards = prompt("Bem vindo ao Parrot Card Game! Com quantas cartas gostaria de jogar? (Escolha um número par de 4 a 14)");
 
-while (nCards % 2 !== 0 || nCards === null || nCards === '') {
-    alert('Por favor, insira um número par para iniciar o jogo.');
+while (nCards % 2 !== 0 || nCards === null || nCards === '' || nCards < 4 || nCards > 14) {
+    alert('Por favor, insira um número válido para iniciar o jogo.');
     nCards = prompt("Bem vindo ao Parrot Card Game! Com quantas cartas gostaria de jogar? (Escolha um número par de 4 a 14)");
 }
 
