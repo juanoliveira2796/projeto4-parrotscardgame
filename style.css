@@ -20,9 +20,8 @@ body{
     text-align: center;
 
     font-weight: 700;
-    font-size: 56px; /* 7vw */
+    font-size: 56px; 
     
-    /* background-color: aqua; */
     color: #75B79E;
 
     margin-top: 40px;
@@ -32,7 +31,6 @@ body{
 
 .content{
     width: 80%;
-    background-color: blueviolet;
 }
 
 ul{
@@ -40,7 +38,6 @@ ul{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    /* background-color: red; */
 }
 
 
@@ -84,3 +81,14 @@ ul{
     transform: rotateY(-180deg);
   }
 
+@media (max-width: 400px) {
+    .header{
+        width: 70%; 
+    }
+}
+
+@media (max-width: 500px) {
+    .header{
+        font-size: 11vw; 
+    }
+}

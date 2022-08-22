@@ -1,4 +1,3 @@
-// Declaraçao de variaveis globais
 let cardsList = ['bobrossparrot.gif', 'explodyparrot.gif', 'fiestaparrot.gif', 'metalparrot.gif', 'revertitparrot.gif', 'tripletsparrot.gif', 'unicornparrot.gif'];
 let gameList = [];
 let cardsTurned = 0;
@@ -10,20 +9,15 @@ let secondTurned;
 let keepPlaying = true;
 
 
-// Laço do jogo
-
 let nCards = prompt("Bem vindo ao Parrot Card Game! Com quantas cartas gostaria de jogar? (Escolha um número par de 4 a 14)");
 
-// Controle para a entrada do número de cartas
 while (nCards % 2 !== 0 || nCards === null || nCards === '') {
     alert('Por favor, insira um número par para iniciar o jogo.');
     nCards = prompt("Bem vindo ao Parrot Card Game! Com quantas cartas gostaria de jogar? (Escolha um número par de 4 a 14)");
 }
 
-// Coloca o número de cartas selecionadas pelo jogador
 let index = -1
 for (let contador = 0; contador < nCards; contador++) {
-    // Adiciona os back-faces em uma lista
     if (contador % 2 === 0) {
         index++
     }
@@ -33,7 +27,6 @@ for (let contador = 0; contador < nCards; contador++) {
 gameList.sort(comparador);
 
 
-// Adiciona a quantidade de cartas já com aleatoriedade do verso s
 for (let contador = 0; contador < nCards; contador++) {
 
     const ulList = document.querySelector('ul')
@@ -47,19 +40,15 @@ for (let contador = 0; contador < nCards; contador++) {
                 <img src="./uteis/${cardsList[gameList[contador]]}" alt="Imagem de um papagaio rockeiro" >
             </div>
         </li>`
-
 }
 
 
 
-// Declaraçao de funçoes f
-
-// Embaralha a gameList
+// Declaraçao de funçoes
 function comparador() {
     return Math.random() - 0.5;
 }
 
-// Vira carta
 function turnCard(element) {
     if (element.classList.contains('turnedCard')) {
         
